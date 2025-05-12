@@ -21,7 +21,7 @@ export class App extends Component<{}, AppState> {
     if (this.state.page.kind === "Home") {
       return <Home onAboutClick={this.doAboutClick} onSkillClick={this.doSkillClick} onProjectClick={this.doProjectClick}/>;
     } else if (this.state.page.kind === "About"){
-      return <About onMainClick={this.doMainPageClick}/>
+      return <About onMainClick={this.doMainPageClick} onSkillClick={this.doSkillClick} onProjectClick={this.doProjectClick}/>
     } else if (this.state.page.kind === "Skills") {
       return <SkillsPage></SkillsPage>
     } else {

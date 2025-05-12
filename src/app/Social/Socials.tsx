@@ -9,13 +9,12 @@ export class Socials extends Component<{}> {
             <div>
                 <div style={{
                     position: "relative",
-                    height: "100vh",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "right",
-                    alignItems: "center"
+                    alignItems: "center",
+                    marginTop: "50px"
                 }}>
-                    <h1 className="lets-connect" style={{position: "relative", left: "1%"}}>Lets Connect!</h1>
                     <ul className="example-2">
                         <li className="icon-content">
                             <a

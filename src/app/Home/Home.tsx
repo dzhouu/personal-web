@@ -1,5 +1,6 @@
 import React, { Component, JSX } from "react";
 import "./Home.css";
+import {Socials} from "../Social/Socials"
 
 type PageProps = {
     onAboutClick: () => void,
@@ -18,8 +19,8 @@ export class Home extends Component<PageProps> {
                 </div>
                 <div style={{ position: "relative", display: "flex", alignItems: "center" }}>
                     <button type={"button"} className="navbar-button" onClick={this.doAboutClick}>About</button>
-                    <button type={"button"} className="navbar-button" onClick={this.doSkillClick}>Skills</button>
-                    <button type={"button"} className="navbar-button" onClick={this.doProjectClick}>Projects</button>
+                    <button type={"button"} className="navbar-button" onClick={this.doSkillClick}>Work</button>
+                    <button type={"button"} className="navbar-button" onClick={this.doProjectClick}>Gear</button>
                 </div>
                 {/* Render bubbles */}
                 <div className="bubbles-container" style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 0 }}>
@@ -30,6 +31,7 @@ export class Home extends Component<PageProps> {
                             animationDelay: `${Math.random() * 10}s`}} />
                     ))}
                 </div>
+                <Socials />
             </div>
         );
     };

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import "./About.css";
-import {Socials} from "../Social/Socials"
 
 type AboutProps = {
     onMainClick: () => void,
+    onSkillClick: () => void,
+    onProjectClick: () => void,
 }
 
 type AboutState = {
@@ -51,27 +52,42 @@ export class About extends Component<AboutProps, AboutState> {
             <div>
                 <div>
                     <button className="btn" onClick={this.doMainClick}>Home</button>
+                    <button className="btn" onClick={this.doSkillClick}>Skills</button>
+                    <button className="btn" onClick={this.doProjectClick}>Project</button>
                 </div>
                 <div className="about-container">
-                    <h1 className="about-heading">Hi my name is <span className="cool-color">Denny</span></h1>
                     <div className="animated-text">
-                        <h2 className="semi-bold">
+                        <h1 className="semi-bold">
                             I am <span className="content-color">{content[currentIndex]}</span>
-                        </h2>
+                        </h1>
+                    </div>
+                    <div className="info-grid">
+                        <div className="info-container">
+                            <h1 className="info-heading">Who I Am</h1>
+                        </div>
+                        <div className="info-container">
+                            <h1 className="info-heading">Hobbies</h1>
+                        </div>
+                        <div className="info-container">
+                            <h1 className="info-heading">Interest</h1>
+                        </div>
+                        <div className="info-container">
+                            <h1 className="info-heading">More Info</h1>
+                        </div>
                     </div>
                 </div>
-                <div className="info-container" style={{position: "absolute", top:'40%', maxWidth: 500}}>
-                    <div>
-                        <h1 className="info-heading">Who I Am</h1>
-                        <p>A Chinese Born American Studying Computer Science @ The University of Washington</p>
-                    </div>
-                </div>
-                <Socials />
             </div>
         )
     };
 
     doMainClick = () => {
         this.props.onMainClick();
+    }
+
+    doSkillClick = () => {
+        this.props.onSkillClick();
+    }
+    doProjectClick = () => {
+        this.props.onProjectClick();
     }
 }
