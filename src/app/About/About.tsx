@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./About/About.css";
-import {Socials} from "./Social/Socials"
+import "./About.css";
+import {Socials} from "../Social/Socials"
 
 type AboutProps = {
     onMainClick: () => void,

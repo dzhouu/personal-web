@@ -1,6 +1,6 @@
 import React, {Component, JSX} from "react";
 import {Home} from "./Home/Home";
-import {About} from "./About";
+import {About} from "./About/About";
 import {SkillsPage} from "./Skills/Skills"
 type Page = {kind: "Home"} | {kind: "About"} | {kind: "Skills"} | {kind: "Projects"} | {kind: "Socials"};
 
