@@ -19,12 +19,12 @@ export const About = (): JSX.Element => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % content.length);
         }, 2000);
 
-        return () => clearInterval(interval); // cleanup on unmount
+        return () => clearInterval(interval);
     }, []);
 
     return (
         <div>
-            <div>
+            <div className="navbar">
                 <button className="btn" onClick={() => navigate("/")}>Home</button>
                 <button className="btn" onClick={() => navigate("/skills")}>Skills</button>
                 <button className="btn" onClick={() => navigate("/projects")}>Project</button>

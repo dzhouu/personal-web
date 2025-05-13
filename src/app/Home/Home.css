@@ -45,8 +45,8 @@
 }
 
 .navbar-button:hover {
-    background-color: #3e8e41; /* Darker green on hover */
-    color: #e0ffe0; /* Light green text */
+    background-color: #FFFFF; /* Darker green on hover */
+    color: #000000; /* Light green text */
     transform: scale(1.05); /* Slightly enlarge the button */
 }
 

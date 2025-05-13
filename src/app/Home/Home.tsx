@@ -30,7 +30,7 @@ export const Home = (): JSX.Element => {
             <div style={{position: "relative", display: "flex", alignItems: "center"}}>
                 <button type="button" className="navbar-button" onClick={() => navigate("/about")}>About</button>
                 <button type="button" className="navbar-button" onClick={() => navigate("/skills")}>Work</button>
-                <button type="button" className="navbar-button" onClick={() => navigate("/projects")}>Gear</button>
+                <button type="button" className="navbar-button" onClick={() => navigate("/gears")}>Gear</button>
             </div>
             {/* Render bubbles */}
             <div className="bubbles-container"
