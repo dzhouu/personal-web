@@ -1,93 +1,55 @@
-import React, { Component } from "react";
+// About.tsx
+import React, {JSX, useEffect, useState} from "react";
 import "./About.css";
+import {useNavigate} from "react-router-dom";
 
-type AboutProps = {
-    onMainClick: () => void,
-    onSkillClick: () => void,
-    onProjectClick: () => void,
-}
+export const About = (): JSX.Element => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const content = [
+        "studying Computer Science",
+        "a Coder",
+        "a Software Developer",
+        "looking for a full-time SWE position",
+    ];
 
-type AboutState = {
-    currentIndex: number,
-    content: string[],
-}
+    const navigate = useNavigate();
 
-export class About extends Component<AboutProps, AboutState> {
-    private interval?: ReturnType<typeof setInterval>;
-    constructor(props: AboutProps) {
-        super(props);
-
-        this.state = {
-            currentIndex: 0,
-            content: [
-                "studying Computer Science",
-                "a Coder",
-                "a Software Developer",
-                "looking for a full-time SWE position",
-            ]
-        };
-    }
-
-    componentDidMount() {
-        this.startAnimation();
-    }
-
-    componentWillUnmount() {
-        if (this.interval) {
-            clearInterval(this.interval);
-        }
-    }
-
-    startAnimation() {
-        this.interval = setInterval(() => {
-            const { currentIndex, content } = this.state;
-            const nextIndex = (currentIndex + 1) % content.length;
-            this.setState({ currentIndex: nextIndex });
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % content.length);
         }, 2000);
-    }
 
-    render = () => {
-        const { content, currentIndex } = this.state;
-        return (
+        return () => clearInterval(interval); // cleanup on unmount
+    }, []);
+
+    return (
+        <div>
             <div>
-                <div>
-                    <button className="btn" onClick={this.doMainClick}>Home</button>
-                    <button className="btn" onClick={this.doSkillClick}>Skills</button>
-                    <button className="btn" onClick={this.doProjectClick}>Project</button>
+                <button className="btn" onClick={() => navigate("/")}>Home</button>
+                <button className="btn" onClick={() => navigate("/skills")}>Skills</button>
+                <button className="btn" onClick={() => navigate("/projects")}>Project</button>
+            </div>
+            <div className="about-container">
+                <div className="animated-text">
+                    <h1 className="semi-bold">
+                        I am <span className="content-color">{content[currentIndex]}</span>
+                    </h1>
                 </div>
-                <div className="about-container">
-                    <div className="animated-text">
-                        <h1 className="semi-bold">
-                            I am <span className="content-color">{content[currentIndex]}</span>
-                        </h1>
+                <div className="info-grid">
+                    <div className="info-container">
+                        <h1 className="info-heading">Who I Am</h1>
                     </div>
-                    <div className="info-grid">
-                        <div className="info-container">
-                            <h1 className="info-heading">Who I Am</h1>
-                        </div>
-                        <div className="info-container">
-                            <h1 className="info-heading">Hobbies</h1>
-                        </div>
-                        <div className="info-container">
-                            <h1 className="info-heading">Interest</h1>
-                        </div>
-                        <div className="info-container">
-                            <h1 className="info-heading">More Info</h1>
-                        </div>
+                    <div className="info-container">
+                        <h1 className="info-heading">Hobbies</h1>
+                    </div>
+                    <div className="info-container">
+                        <h1 className="info-heading">Interest</h1>
+                    </div>
+                    <div className="info-container">
+                        <h1 className="info-heading">More Info</h1>
                     </div>
                 </div>
             </div>
-        )
-    };
-
-    doMainClick = () => {
-        this.props.onMainClick();
-    }
-
-    doSkillClick = () => {
-        this.props.onSkillClick();
-    }
-    doProjectClick = () => {
-        this.props.onProjectClick();
-    }
-}
+        </div>
+    );
+};
