@@ -1,0 +1,106 @@
+/* Add this to your CSS file or use styled-components */
+
+.stuff-showcase {
+    font-family: Arial, sans-serif;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.category {
+    margin-bottom: 40px;
+}
+
+.category-title {
+    text-align: center;
+    color: #444;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.section {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.section-header {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.section-title {
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+.toggle-icon {
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.section.active .section-content {
+    max-height: 500px;
+}
+
+.section.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-title {
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    color: white;
+}
+
+.item-description {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.item-image {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.item-image img {
+    max-width: 40px;
+    max-height: 40px;
+}

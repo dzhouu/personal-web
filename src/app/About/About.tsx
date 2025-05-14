@@ -26,8 +26,8 @@ export const About = (): JSX.Element => {
         <div>
             <div className="navbar">
                 <button className="btn" onClick={() => navigate("/")}>Home</button>
-                <button className="btn" onClick={() => navigate("/skills")}>Skills</button>
-                <button className="btn" onClick={() => navigate("/projects")}>Project</button>
+                <button className="btn" onClick={() => navigate("/portfolio")}>Portfolio</button>
+                <button className="btn" onClick={() => navigate("/gears")}>Gear</button>
             </div>
             <div className="about-container">
                 <div className="animated-text">
@@ -38,9 +38,20 @@ export const About = (): JSX.Element => {
                 <div className="info-grid">
                     <div className="info-container">
                         <h1 className="info-heading">Who I Am</h1>
+                        <p>Hello, you landed on my page!</p>
+                        <p> I have recently graduated from the University of Washington with a Computer Science
+                            degree</p>
+                        <p> I was born and raised in Seattle, WA</p>
+
                     </div>
                     <div className="info-container">
                         <h1 className="info-heading">Hobbies</h1>
+                        <b>Some of my hobbies consist of:</b>
+
+                        <li>Snowboarding</li>
+                        <li>Tennis</li>
+                        <li>Golf</li>
+                        <li>Video Games</li>
                     </div>
                     <div className="info-container">
                         <h1 className="info-heading">Interest</h1>

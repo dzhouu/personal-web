@@ -28,10 +28,12 @@ export const SkillsPage = (): JSX.Element => {
     const navigate = useNavigate();
 
     return (
-        <div className="navbar">
-            <button className="btn" onClick={() => navigate("/")}>Home</button>
-            <button className="btn" onClick={() => navigate("/skills")}>About</button>
-            <button className="btn" onClick={() => navigate("/gear")}>Gear</button>
+        <div>
+            <div className="navbar">
+                <button className="btn" onClick={() => navigate("/")}>Home</button>
+                <button className="btn" onClick={() => navigate("/about")}>About</button>
+                <button className="btn" onClick={() => navigate("/gears")}>Gear</button>
+            </div>
         </div>
     );
 };

@@ -1,7 +1,85 @@
+/* Home.css (Fixed Version) */
+
+/* Reset styles to prevent default spacing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #a6c8d8; /* Light blue from your screenshot */
+}
+
+/* Main container for the home page */
+.home-container {
+    position: fixed; /* This prevents any scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent content from causing scroll */
+}
+
+/* Container for bubbles */
+.bubbles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through to elements below */
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Main content area */
+.content-container {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* Title styling */
+.home-title {
+    font-family: monospace;
+    text-align: center;
+    font-size: clamp(50px, 15vw, 150px); /* Responsive font size */
+    margin-bottom: 30px;
+    z-index: 20;
+}
+
+
+/* Bubble styling */
+.bubble {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ffb6c1;
+    border-radius: 50%;
+    animation: bubble 3s ease-in-out infinite;
+    /* No left positioning here - it's handled inline */
+}
+
+/* Animation for fading in content */
 @keyframes fadeInAndMove {
     0% {
         opacity: 0;
-        transform: translateY(-100px);
+        transform: translateY(-50px);
     }
     100% {
         opacity: 1;
@@ -9,10 +87,11 @@
     }
 }
 
+/* Animation for bubbles that stays contained */
 @keyframes bubble {
     0% {
         transform: translateY(0) scale(1);
-        opacity: 1;
+        opacity: 0.8;
     }
     50% {
         transform: translateY(-100px) scale(1.2);
@@ -24,56 +103,18 @@
     }
 }
 
-.navbar {
-    display: flex;
-    margin-top: 20px;
+/* Apply fade-in animation to content */
+.content-container {
+    animation: fadeInAndMove 1s ease-out;
 }
 
-.navbar-button {
-    width: 6.5em;
-    height: 2.3em;
-    padding: 10px 20px;
-    margin: 0 20px;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-    position: relative; /* Ensure it's not affected by other layouts */
-    z-index: 1; /* Ensure it stays clickable above other elements */
-}
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .nav-buttons {
+        flex-direction: column;
+    }
 
-.navbar-button:hover {
-    background-color: #FFFFF; /* Darker green on hover */
-    color: #000000; /* Light green text */
-    transform: scale(1.05); /* Slightly enlarge the button */
-}
-
-.bubble {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #ffb6c1;
-    border-radius: 50%;
-    animation: bubble 3s ease-in-out infinite;
-    /* Adjusted left positioning */
-    left: calc(100vw * var(- -random-x)); /* Ensure bubbles can generate across entire width */
-}
-
-button {
-    cursor: pointer;
-    filter: drop-shadow(0 0 2px rgba(56, 56, 56, 0.1));
-    font-size: 1.1em;
-    font-family: "Nunito Sans", sans-serif;
-    font-weight: 600;
-    outline: none;
-    text-align: center;
-    text-decoration: none;
-    background: linear-gradient(90deg, #b1b1ff, #664ff5);
-    backdrop-filter: blur(2px);
-    border: none;
-    color: white;
-    padding: 5px;
-    transition: color 0.35s;
+    .navbar-button {
+        margin: 5px 0;
+    }
 }

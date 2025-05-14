@@ -10,8 +10,8 @@ export const App = (): JSX.Element => {
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/about" element={<About/>}/>
-            <Route path="/skills" element={<SkillsPage/>}/>
-            <Route path="/gear" element={<GearPage/>}/>
+            <Route path="/portfolio" element={<SkillsPage/>}/>
+            <Route path="/gears" element={<GearPage/>}/>
         </Routes>
     );
 };

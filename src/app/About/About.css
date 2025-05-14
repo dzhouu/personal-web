@@ -106,7 +106,7 @@ p {
     width: 6.5em;
     height: 2.3em;
     margin: 0.5em;
-    background: black;
+    background: linear-gradient(90deg, #b1b1ff, #664ff5);
     color: white;
     border: none;
     border-radius: 0.625em;
@@ -142,5 +142,8 @@ button:hover:after {
 }
 
 .navbar {
+    display: flex;
     justify-content: center;
+    width: 100%;
+    gap: 20px;
 }
