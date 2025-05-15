@@ -74,36 +74,54 @@ export const GearPage = (): JSX.Element => {
             title: "Work & Play",
             sections: [
                 {
-                    title: "Keyboards",
+                    title: "Keyboards / Mice",
                     items: [
                         {
-                            title: "Lofree Flow",
-                            description: "10% OFF code: calvinxli",
-                            imageUrl: "/images/lofree-flow.jpg" // Replace with actual image path
+                            title: "Keyboard 1",
+                            description: "Keychron Q2 Max",
                         },
                         {
-                            title: "Keydous NJ80-AP",
-                            description: "brass plate, g pro brown switches",
-                            imageUrl: "/images/keydous.jpg" // Replace with actual image path
+                            title: "Keyboard 2",
+                            description: "NuPhy Halo 65",
                         },
                         {
-                            title: "Keychron Q1 HE",
-                            description: "shell white version",
-                            imageUrl: "/images/keychron.jpg" // Replace with actual image path
-                        }
+                            title: "Mice 1 ",
+                            description: "Logitech G502 Light Speed"
+                        },
                     ]
                 },
                 {
                     title: "Desktop",
                     items: [
                         {
-                            title: "Monitor Stand",
+                            title: "Monitor 1",
+                            description: "LG 34WP60C-B 34-Inch 21:9 Curved UltraWide QHD (3440x1440)"
+                        },
+                        {
+                            title: "Monitor 2",
+                            description: "LG 27GN800-B UltraGear 27 inch QHD"
+                        }
+                    ]
+                },
+                {
+                    title: "PC Specs",
+                    items: [
+                        {
+                            title: "CPU",
+                            description: "Walnut wood, adjustable height"
+                        },
+                        {
+                            title: "GPU",
+                            description: "Walnut wood, adjustable height"
+                        },
+                        {
+                            title: "CPU",
                             description: "Walnut wood, adjustable height"
                         }
                     ]
                 },
                 {
-                    title: "Lighting",
+                    title: "Empty Space 1",
                     items: []
                 },
                 {
@@ -117,10 +135,10 @@ export const GearPage = (): JSX.Element => {
             ]
         },
         {
-            title: "Content",
+            title: "Essentials",
             sections: [
                 {
-                    title: "Cameras",
+                    title: "Skin Care",
                     items: []
                 },
                 {
@@ -134,11 +152,57 @@ export const GearPage = (): JSX.Element => {
             ]
         },
         {
+          title: "Skin Care",
+          sections: [
+              {
+                title: "Toner",
+                items: [
+                    {
+                        title: "ISov",
+                        description: "Hello",
+                    },
+                ]
+              },
+              {
+                  title: "Moisturizer",
+                  items: [
+                      {
+                          title: "ISov",
+                          description: "Hello",
+                      },
+                  ]
+              },
+              {
+                  title: "Sun Care",
+                  items: [
+                      {
+                          title: "ISov",
+                          description: "Hello",
+                      },
+                  ]
+              },
+              {
+                  title: "Cleanser",
+                  items: [
+                      {
+                          title: "ISov",
+                          description: "Hello",
+                      },
+                  ]
+              },
+          ]
+        },
+        {
             title: "Other",
             sections: [
                 {
                     title: "Everyday Carry",
-                    items: []
+                    items: [
+                        {
+                            title: "Backpack",
+                            description: "Peak Design Backpack Everyday V2",
+                        },
+                    ]
                 }
             ]
         }
@@ -154,7 +218,6 @@ export const GearPage = (): JSX.Element => {
                         key={index}
                         title={section.title}
                         items={section.items}
-                        defaultOpen={index === 0} // First section is open by default
                     />
                 ))}
             </div>
