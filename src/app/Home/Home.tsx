@@ -3,6 +3,7 @@ import React, {JSX, useEffect} from "react";
 import "./Home.css";
 import {Socials} from "../Social/Socials";
 import {useNavigate} from "react-router-dom";
+import ProfileHeader from "../Profile-Header/Profile";
 
 export const Home = (): JSX.Element => {
     const navigate = useNavigate();
@@ -45,9 +46,10 @@ export const Home = (): JSX.Element => {
 
             {/* Main content container */}
             <div className="content-container">
-                <h1 className="home-title">
-                    Denny Zhou
-                </h1>
+                {/*<h1 className="home-title">*/}
+                {/*    Denny Zhou*/}
+                {/*</h1>*/}
+                <ProfileHeader />
 
                 <div className="nav-buttons">
                     <button
