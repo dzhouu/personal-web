@@ -1,10 +1,10 @@
 /* ProfileHeader.css - Updated to make everything bigger */
 .profile-container {
     width: 100%;
-    max-width: 600px;  /* Increased from 400px */
+    max-width: 600px;
     margin: 0 auto;
-    padding: 60px;     /* Increased from 40px */
-    border-radius: 12px; /* Increased from 8px */
+    padding: 60px;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,13 +12,13 @@
 }
 
 .profile-image-container {
-    width: 220px;      /* Increased from 144px */
-    height: 220px;     /* Increased from 144px */
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid white; /* Increased from 4px */
+    border: 5px solid white;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 32px; /* Increased from 24px */
+    margin-bottom: 32px;
 }
 
 .profile-image-wrapper {
@@ -37,35 +37,35 @@
 }
 
 .profile-name {
-    font-size: 3rem;     /* Increased from 2.25rem */
+    font-size: 3rem;
     font-weight: 700;
     color: #1f2937;
-    margin-bottom: 8px;  /* Increased from 4px */
+    margin-bottom: 8px;
 }
 
 .profile-username {
     color: #4b5563;
-    font-size: 1.5rem;   /* Increased from 1.125rem */
-    margin-bottom: 32px;  /* Increased from 24px */
+    font-size: 1.5rem;
+    margin-bottom: 32px;
 }
 
 .interests-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;           /* Increased from 8px */
-    margin-bottom: 24px; /* Increased from 16px */
+    gap: 12px;
+    margin-bottom: 24px;
 }
 
 .interest-item {
     display: inline-flex;
     align-items: center;
     color: #374151;
-    font-size: 1.25rem;  /* Added font size increase */
+    font-size: 1.25rem;
 }
 
 .interest-separator {
-    margin: 0 6px;       /* Increased from 4px */
+    margin: 0 6px;
     color: #9ca3af;
 }
 
@@ -74,11 +74,11 @@
     align-items: center;
     justify-content: center;
     color: #4b5563;
-    margin-top: 12px;    /* Increased from 8px */
-    font-size: 1.25rem;  /* Added font size increase */
+    margin-top: 12px;
+    font-size: 1.25rem;
 }
 
 .location-icon {
-    margin-right: 6px;   /* Increased from 4px */
-    font-size: 1.25rem;  /* Added size increase for the icon */
+    margin-right: 6px;
+    font-size: 1.25rem;
 }
