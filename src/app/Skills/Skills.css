@@ -83,14 +83,14 @@
     align-items: flex-start;
 }
 
-.item-title {
+.item-title-exp {
     font-size: 1.25rem;
     font-weight: 600;
     color: #312e81;
     margin: 0;
 }
 
-.item-subtitle {
+.item-subtitle-exp {
     margin-top: 0.25rem;
     color: #4338ca;
 }
@@ -126,7 +126,7 @@
     animation: fadeIn 0.3s ease-out forwards;
 }
 
-.item-description {
+.item-description-exp {
     color: #4b5563;
 }
 
@@ -180,13 +180,13 @@
     }
 }
 
-.item-description-list {
+.item-description-list-exp {
     padding-left: 1.5rem;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
 
-.item-description-point {
+.item-description-point-exp {
     margin-bottom: 0.25rem;
     color: #4b5563;
 }

@@ -1,7 +1,7 @@
-// About.tsx
 import React, {JSX, useEffect, useState} from "react";
 import "./About.css";
 import {useNavigate} from "react-router-dom";
+import AllRightReserveComponent from "../All-Right-Reserve/All-Right-Reserve-Component";
 
 export const About = (): JSX.Element => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -39,27 +39,38 @@ export const About = (): JSX.Element => {
                     <div className="info-container">
                         <h1 className="info-heading">Who I Am</h1>
                         <p>Hello, you landed on my page!</p>
-                        <p> I have recently graduated from the University of Washington with a Computer Science
-                            degree</p>
-                        <p> I was born and raised in Seattle, WA</p>
-
+                        <p>I have recently graduated from the University of Washington with a Computer Science degree</p>
+                        <p>I was born and raised in Seattle, WA</p>
                     </div>
                     <div className="info-container">
                         <h1 className="info-heading">Hobbies</h1>
-                        <b>Some of my hobbies consist of:</b>
-
-                        <li>Snowboarding</li>
-                        <li>Tennis</li>
-                        <li>Golf</li>
-                        <li>Video Games</li>
+                        <p><b>Some of my hobbies consist of:</b></p>
+                        <ul>
+                            <li>Snowboarding</li>
+                            <li>Tennis</li>
+                            <li>Golf</li>
+                            <li>Video Games</li>
+                        </ul>
                     </div>
                     <div className="info-container">
                         <h1 className="info-heading">Interest</h1>
+                        <p>I'm passionate about technology and software development. My areas of interest include:</p>
+                        <ul>
+                            <li>Full-stack Web Development</li>
+                            <li>Mobile App Creation</li>
+                            <li>User Experience Design</li>
+                            <li>Cloud Architecture</li>
+                        </ul>
                     </div>
                     <div className="info-container">
                         <h1 className="info-heading">More Info</h1>
+                        <p>I'm currently seeking opportunities in software development where I can apply my skills and continue to grow.</p>
+                        <p>Feel free to check out my portfolio to see some of my recent projects, or contact me if you'd like to connect!</p>
+                        <p>I enjoy collaborating on innovative projects that solve real-world problems.</p>
                     </div>
                 </div>
+
+                <AllRightReserveComponent/>
             </div>
         </div>
     );

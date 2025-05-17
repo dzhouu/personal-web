@@ -2,6 +2,7 @@
 import React, {JSX, useEffect} from "react";
 import "./Home.css";
 import {Socials} from "../Social/Socials";
+import AllRightReserveComponent from "../All-Right-Reserve/All-Right-Reserve-Component";
 import {useNavigate} from "react-router-dom";
 import ProfileHeader from "../Profile-Header/Profile";
 
@@ -76,6 +77,7 @@ export const Home = (): JSX.Element => {
                 </div>
 
                 <Socials />
+                <AllRightReserveComponent />
             </div>
         </div>
     );

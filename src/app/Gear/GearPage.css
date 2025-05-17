@@ -80,13 +80,13 @@
 .item-title {
     font-weight: bold;
     margin: 0 0 5px 0;
-    color: white;
+    color: blue;
 }
 
 .item-description {
     margin: 0;
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
+    color: black;
 }
 
 .item-image {

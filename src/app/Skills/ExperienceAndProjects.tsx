@@ -169,8 +169,8 @@ const ExperienceAndProjects: React.FC = () => {
                         <div key={exp.id} className="item-card">
                             <div className="item-header">
                                 <div>
-                                    <h3 className="item-title">{exp.role}</h3>
-                                    <div className="item-subtitle">
+                                    <h3 className="item-title-gear">{exp.role}</h3>
+                                    <div className="item-subtitle-exp">
                                         <span className="company">{exp.company}</span> • {exp.location}
                                     </div>
                                     <div className="item-period">{exp.period}</div>
@@ -185,10 +185,10 @@ const ExperienceAndProjects: React.FC = () => {
 
                             {expandedItems[exp.id] && (
                                 <div className="item-details">
-                                    <b className="item-description">{exp.summary}</b>
-                                    <ul className="item-description-list">
+                                    <b className="item-description-exp">{exp.summary}</b>
+                                    <ul className="item-description-list-exp">
                                         {exp.description.map((point, index) => (
-                                            <li key={index} className='item-description-point'>{point}</li>))}
+                                            <li key={index} className='item-description-point-exp'>{point}</li>))}
                                     </ul>
                                     <div className="tech-container">
                                         {exp.technologies.map((tech, index) => (
@@ -206,7 +206,7 @@ const ExperienceAndProjects: React.FC = () => {
                         <div key={project.id} className="item-card">
                             <div className="item-header">
                                 <div>
-                                    <h3 className="item-title">{project.title}</h3>
+                                    <h3 className="item-title-gear">{project.title}</h3>
                                     <div className="item-period">{project.period}</div>
                                 </div>
                                 <button
@@ -219,10 +219,10 @@ const ExperienceAndProjects: React.FC = () => {
 
                             {expandedItems[project.id] && (
                                 <div className="item-details">
-                                    <b className="item-description">{project.summary}</b>
-                                    <ul className="item-description-list">
+                                    <b className="item-description-exp">{project.summary}</b>
+                                    <ul className="item-description-list-exp">
                                         {project.description.map((point, index) => (
-                                            <li key={index} className="item-description-point">{point}</li>
+                                            <li key={index} className="item-description-point-exp">{point}</li>
                                         ))}
                                     </ul>
                                     <div className="tech-container">
