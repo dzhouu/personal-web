@@ -1,28 +1,30 @@
-import React, {JSX, useState} from 'react';
-import {useNavigate} from "react-router-dom";
-import './GearPage.css'
+import React, { JSX, useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import './GearPage.css';
+import AllRightReserveComponent from "../All-Right-Reserve/All-Right-Reserve-Component";
+
+// Define interfaces outside the component for better readability
+interface ItemProps {
+    title: string;
+    description: string;
+    imageUrl?: string;
+}
+
+interface SectionProps {
+    title: string;
+    items: ItemProps[];
+    defaultOpen?: boolean;
+}
+
+interface CategoryProps {
+    title: string;
+    sections: SectionProps[];
+}
 
 export const GearPage = (): JSX.Element => {
     const navigate = useNavigate();
 
-    interface ItemProps {
-        title: string;
-        description: string;
-        imageUrl?: string;
-    }
-
-    interface SectionProps {
-        title: string;
-        items: ItemProps[];
-        defaultOpen?: boolean;
-    }
-
-    interface CategoryProps {
-        title: string;
-        sections: SectionProps[];
-    }
-
-// Item Component
+    // Item Component with more compact styling
     const Item: React.FC<ItemProps> = ({ title, description, imageUrl }) => {
         return (
             <div className="item">
@@ -34,14 +36,14 @@ export const GearPage = (): JSX.Element => {
                     {imageUrl ? (
                         <img src={imageUrl} alt={title} />
                     ) : (
-                        <img src="/api/placeholder/50/50" alt={title} />
+                        <img src="/api/placeholder/40/40" alt={title} />
                     )}
                 </div>
             </div>
         );
     };
 
-    // Section Component
+    // Section Component with improved toggle functionality
     const Section: React.FC<SectionProps> = ({ title, items, defaultOpen = false }) => {
         const [isOpen, setIsOpen] = useState(defaultOpen);
 
@@ -55,20 +57,27 @@ export const GearPage = (): JSX.Element => {
                     <h3 className="section-title">{title}</h3>
                     <span className="toggle-icon">{isOpen ? '▲' : '▼'}</span>
                 </div>
-                <div className="section-content">
-                    {items.map((item, index) => (
-                        <Item
-                            key={index}
-                            title={item.title}
-                            description={item.description}
-                            imageUrl={item.imageUrl}
-                        />
-                    ))}
-                </div>
+                {isOpen && (
+                    <div className="section-content">
+                        {items.length > 0 ? (
+                            items.map((item, index) => (
+                                <Item
+                                    key={index}
+                                    title={item.title}
+                                    description={item.description}
+                                    imageUrl={item.imageUrl}
+                                />
+                            ))
+                        ) : (
+                            <div className="empty-section">No items added yet</div>
+                        )}
+                    </div>
+                )}
             </div>
         );
     };
-    // Sample data structure
+
+    // Clean up the duplicate and empty data
     const categories: CategoryProps[] = [
         {
             title: "Work & Play",
@@ -85,7 +94,7 @@ export const GearPage = (): JSX.Element => {
                             description: "NuPhy Halo 65",
                         },
                         {
-                            title: "Mice 1 ",
+                            title: "Mouse",
                             description: "Logitech G502 Light Speed"
                         },
                     ]
@@ -95,7 +104,15 @@ export const GearPage = (): JSX.Element => {
                     items: [
                         {
                             title: "Monitor 1",
-                            description: "LG 34WP60C-B 34-Inch 21:9 Curved UltraWide QHD (3440x1440)"
+                            description: "LG 34WP60C-B 34-Inch UltraWide QHD"
+                        },
+                        {
+                            title: "Monitor 2",
+                            description: "LG 27GN800-B UltraGear 27 inch QHD"
+                        },
+                        {
+                            title: "Monitor 1",
+                            description: "LG 34WP60C-B 34-Inch UltraWide QHD"
                         },
                         {
                             title: "Monitor 2",
@@ -108,29 +125,30 @@ export const GearPage = (): JSX.Element => {
                     items: [
                         {
                             title: "CPU",
-                            description: "Walnut wood, adjustable height"
+                            description: "AMD Ryzen 9 5900X"
                         },
                         {
                             title: "GPU",
-                            description: "Walnut wood, adjustable height"
+                            description: "NVIDIA RTX 3080 Ti"
                         },
                         {
-                            title: "CPU",
-                            description: "Walnut wood, adjustable height"
+                            title: "RAM",
+                            description: "32GB DDR4 3600MHz"
                         }
                     ]
                 },
                 {
-                    title: "Empty Space 1",
-                    items: []
-                },
-                {
                     title: "Office Furniture",
-                    items: []
-                },
-                {
-                    title: "PC Specs",
-                    items: []
+                    items: [
+                        {
+                            title: "Desk",
+                            description: "Walnut wood, adjustable height"
+                        },
+                        {
+                            title: "Chair",
+                            description: "Ergonomic mesh office chair"
+                        }
+                    ]
                 }
             ]
         },
@@ -138,59 +156,77 @@ export const GearPage = (): JSX.Element => {
             title: "Essentials",
             sections: [
                 {
-                    title: "Skin Care",
-                    items: []
-                },
-                {
                     title: "Lighting",
-                    items: []
+                    items: [
+                        {
+                            title: "Desk Lamp",
+                            description: "Adjustable LED desk lamp"
+                        },
+                        {
+                            title: "Key Light",
+                            description: "Elgato Key Light Air"
+                        }
+                    ]
                 },
                 {
                     title: "Microphones",
-                    items: []
+                    items: [
+                        {
+                            title: "Mic",
+                            description: "Blue Yeti X"
+                        }
+                    ]
                 }
             ]
         },
         {
-          title: "Skin Care",
-          sections: [
-              {
-                title: "Toner",
-                items: [
-                    {
-                        title: "ISov",
-                        description: "Hello",
-                    },
-                ]
-              },
-              {
-                  title: "Moisturizer",
-                  items: [
-                      {
-                          title: "ISov",
-                          description: "Hello",
-                      },
-                  ]
-              },
-              {
-                  title: "Sun Care",
-                  items: [
-                      {
-                          title: "ISov",
-                          description: "Hello",
-                      },
-                  ]
-              },
-              {
-                  title: "Cleanser",
-                  items: [
-                      {
-                          title: "ISov",
-                          description: "Hello",
-                      },
-                  ]
-              },
-          ]
+            title: "Skin Care",
+            sections: [
+                {
+                    title: "Cleanser",
+                    items: [
+                        {
+                            title: "Morning",
+                            description: "CeraVe Hydrating Cleanser"
+                        },
+                        {
+                            title: "Evening",
+                            description: "La Roche-Posay Purifying Cleanser"
+                        }
+                    ]
+                },
+                {
+                    title: "Toner",
+                    items: [
+                        {
+                            title: "Daily",
+                            description: "Thayers Witch Hazel Toner"
+                        }
+                    ]
+                },
+                {
+                    title: "Moisturizer",
+                    items: [
+                        {
+                            title: "Day",
+                            description: "CeraVe Daily Moisturizing Lotion"
+                        },
+                        {
+                            title: "Night",
+                            description: "Neutrogena Hydro Boost"
+                        }
+                    ]
+                },
+                {
+                    title: "Sun Care",
+                    items: [
+                        {
+                            title: "Daily",
+                            description: "La Roche-Posay Anthelios SPF 50"
+                        }
+                    ]
+                }
+            ]
         },
         {
             title: "Other",
@@ -200,45 +236,53 @@ export const GearPage = (): JSX.Element => {
                     items: [
                         {
                             title: "Backpack",
-                            description: "Peak Design Backpack Everyday V2",
+                            description: "Peak Design Everyday V2"
                         },
+                        {
+                            title: "Wallet",
+                            description: "Slim minimalist wallet"
+                        }
                     ]
                 }
             ]
-        }
+        },
     ];
 
-// Category Component
+    // Grid-based Category Component for better space utilization
     const Category: React.FC<CategoryProps> = ({ title, sections }) => {
         return (
             <div className="category">
                 <h2 className="category-title">{title}</h2>
-                {sections.map((section, index) => (
-                    <Section
-                        key={index}
-                        title={section.title}
-                        items={section.items}
-                    />
-                ))}
+                <div className="sections-grid">
+                    {sections.map((section, index) => (
+                        <Section
+                            key={index}
+                            title={section.title}
+                            items={section.items}
+                        />
+                    ))}
+                </div>
             </div>
         );
     };
 
     return (
-        <div>
+        <div className="gear-page-container">
             <div className="navbar">
                 <button className="btn" onClick={() => navigate("/")}>Home</button>
                 <button className="btn" onClick={() => navigate("/about")}>About</button>
                 <button className="btn" onClick={() => navigate("/portfolio")}>Portfolio</button>
             </div>
             <div className="stuff-showcase">
-                {categories.map((category, index) => (
-                    <Category
-                        key={index}
-                        title={category.title}
-                        sections={category.sections}
-                    />
-                ))}
+                <div className="categories-grid">
+                    {categories.map((category, index) => (
+                        <Category
+                            key={index}
+                            title={category.title}
+                            sections={category.sections}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );

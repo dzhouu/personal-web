@@ -1,15 +1,25 @@
-/* Add this to your CSS file or use styled-components */
-
-.stuff-showcase {
+.gear-page-container {
     font-family: Arial, sans-serif;
     color: #333;
-    max-width: 600px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.stuff-showcase {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px 40px;
+}
+
+/* Grid layout for categories */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 
 .category {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .category-title {
@@ -17,17 +27,28 @@
     color: #444;
     margin-bottom: 15px;
     font-size: 24px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+}
+
+/* Grid layout for sections within each category */
+.sections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 15px;
 }
 
 .section {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    margin-bottom: 10px;
     overflow: hidden;
+    height: fit-content;
+    transition: all 0.3s ease;
 }
 
 .section-header {
-    padding: 15px;
+    padding: 12px 15px;
     background-color: rgba(255, 255, 255, 0.3);
     display: flex;
     justify-content: space-between;
@@ -39,6 +60,7 @@
     font-weight: bold;
     color: white;
     margin: 0;
+    font-size: 16px;
 }
 
 .toggle-icon {
@@ -48,13 +70,9 @@
 }
 
 .section-content {
-    max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-}
-
-.section.active .section-content {
-    max-height: 500px;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .section.active .toggle-icon {
@@ -65,7 +83,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 12px 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -79,19 +97,20 @@
 
 .item-title {
     font-weight: bold;
-    margin: 0 0 5px 0;
-    color: blue;
+    margin: 0 0 3px 0;
+    color: #1a73e8;
+    font-size: 14px;
 }
 
 .item-description {
     margin: 0;
-    font-size: 14px;
-    color: black;
+    font-size: 13px;
+    color: #333;
 }
 
 .item-image {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: white;
     border-radius: 5px;
     display: flex;
@@ -101,6 +120,32 @@
 }
 
 .item-image img {
-    max-width: 40px;
-    max-height: 40px;
+    max-width: 35px;
+    max-height: 35px;
+}
+
+.empty-section {
+    padding: 12px 15px;
+    font-style: italic;
+    color: #777;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sections-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* For medium-sized screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .sections-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
 }
