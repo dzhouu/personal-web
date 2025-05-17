@@ -77,8 +77,8 @@ export const Home = (): JSX.Element => {
                 </div>
 
                 <Socials />
-                <AllRightReserveComponent />
             </div>
+            <AllRightReserveComponent />
         </div>
     );
 };
