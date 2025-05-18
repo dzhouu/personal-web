@@ -116,35 +116,26 @@ export const GearPage = (): JSX.Element => {
                     items: [
                         {
                             title: "CPU",
-                            description: "AMD Ryzen 9 5900X"
+                            description: "Intel I5-12400"
                         },
                         {
                             title: "GPU",
-                            description: "NVIDIA RTX 3080 Ti"
+                            description: "NVIDIA RTX 3060 Ti"
                         },
                         {
                             title: "RAM",
                             description: "32GB DDR4 3600MHz"
+                        },
+                        {
+                            title: "Motherboard",
+                            description: "GIGABYTE B660 AORUS Master DDR4"
                         }
                     ]
                 },
-                {
-                    title: "Office Furniture",
-                    items: [
-                        {
-                            title: "Desk",
-                            description: "Walnut wood, adjustable height"
-                        },
-                        {
-                            title: "Chair",
-                            description: "Ergonomic mesh office chair"
-                        }
-                    ]
-                }
             ]
         },
         {
-            title: "Essentials",
+            title: "Sports",
             sections: [
                 {
                     title: "Lighting",
@@ -177,21 +168,29 @@ export const GearPage = (): JSX.Element => {
                     title: "Cleanser",
                     items: [
                         {
-                            title: "Morning",
-                            description: "Roundlab Dokdo Cleanser"
+                            title: "Foam Cleanser",
+                            description: "Roundlab 1025 Dokdo Cleanser"
                         },
                         {
-                            title: "Evening",
-                            description: "La Roche-Posay Purifying Cleanser"
-                        }
+                            title: "Oil Cleanser",
+                            description: "Roundlab 1025 Dokdo Oil Cleanser"
+                        },
+                        {
+                            title: "Foaming Cleanser",
+                            description: "InnisFree Volcanic BHA Pore Cleansing Foam"
+                        },
+                        {
+                            title: "Foaming Cleanser",
+                            description: "Obagi Nu Derm 01 Foaming Cleanser"
+                        },
                     ]
                 },
                 {
                     title: "Toner",
                     items: [
                         {
-                            title: "ISov",
-                            description: "Thayers Witch Hazel Toner"
+                            title: "Gel Toner",
+                            description: "ISov Sorex Gel Moisturizing Toner"
                         }
                     ]
                 },
@@ -199,12 +198,12 @@ export const GearPage = (): JSX.Element => {
                     title: "Moisturizer",
                     items: [
                         {
-                            title: "Day",
-                            description: "CeraVe Daily Moisturizing Lotion"
+                            title: "Gentle Moisturizer",
+                            description: "Neutrogena Hydro Boost Water Gel"
                         },
                         {
-                            title: "Night",
-                            description: "Neutrogena Hydro Boost"
+                            title: "Oil-Free Moisturizer",
+                            description: "CosRx Birch Sap Daily Acne Facial Moisturizer"
                         }
                     ]
                 },
@@ -212,9 +211,13 @@ export const GearPage = (): JSX.Element => {
                     title: "Sun Care",
                     items: [
                         {
-                            title: "Daily",
-                            description: "La Roche-Posay Anthelios SPF 50"
-                        }
+                            title: "Sunscreen",
+                            description: "La Roche-Posay Anthelios SPF 100"
+                        },
+                        {
+                            title: "Sunscreen",
+                            description: "Roundlab Birch Moisturizing Sunscreen SPF 50"
+                        },
                     ]
                 }
             ]
@@ -230,13 +233,21 @@ export const GearPage = (): JSX.Element => {
                             description: "Peak Design Everyday V2"
                         },
                         {
-                            title: "Wallet",
-                            description: "Slim minimalist wallet"
+                            title: "Sunglasses",
+                            description: "Gentle-Monster"
                         },
                         {
-                            title: "Sunglasses",
-                            description: "Gentlemonster"
-                        }
+                            title: "Headphones",
+                            description: "Sony WH-1000XM5"
+                        },
+                        {
+                            title: "Earbuds",
+                            description: "AirPods"
+                        },
+                        {
+                            title: "Phone",
+                            description: "IPhone 13 Pro"
+                        },
                     ]
                 }
             ]
