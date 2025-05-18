@@ -15,7 +15,7 @@ interface ProfileData {
 const profileData: ProfileData = {
     name: "Denny Zhou",
     username: "@dzhou11",
-    interests: ["Food", "Tech", "Travel", "Care"],
+    interests: ["Food", "Tech", "Travel", "Health"],
     location: "Seattle, WA"
 };
 
@@ -51,7 +51,6 @@ const ProfileHeader: React.FC = () => {
           </span>
                 ))}
             </div>
-
             {/* Location */}
             <div className="location-container">
                 <MapPin size={16} className="location-icon"/>

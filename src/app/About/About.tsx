@@ -38,28 +38,38 @@ export const About = (): JSX.Element => {
                 <div className="info-grid">
                     <div className="info-container">
                         <h1 className="info-heading">Who I Am</h1>
-                        <p>Hello, you landed on my page!</p>
-                        <p>I have recently graduated from the University of Washington with a Computer Science degree</p>
-                        <p>I was born and raised in Seattle, WA</p>
+                        <p>I was born and raised in Seattle, WA but lived in China for a few years</p>
+                        <p>Graduate from the University of Washington Computer Science Department</p>
+                        <p>I am an avid foodie and I love to chat over coffee/food.</p>
+                        <p>I love cars and my dream car is a Porsche 911</p>
+                        <p>My favorite sports teams are the Seahawks and Warriors</p>
                     </div>
                     <div className="info-container">
                         <h1 className="info-heading">Hobbies</h1>
                         <p><b>Some of my hobbies consist of:</b></p>
                         <ul>
-                            <li>Snowboarding</li>
+                            <li>Snowboarding - IKON Pass Holder during the winter time</li>
                             <li>Tennis</li>
                             <li>Golf</li>
-                            <li>Video Games</li>
+                            <li>Video Games - Valorant, Destiny 2, Pokemon</li>
+                            <li>Foodie Adventures - Follow my Beli!</li>
+                            <li>Anime</li>
                         </ul>
                     </div>
                     <div className="info-container">
                         <h1 className="info-heading">Interest</h1>
-                        <p>I'm passionate about technology and software development. My areas of interest include:</p>
+                        <p>Some of my Career interest consist of:</p>
                         <ul>
-                            <li>Full-stack Web Development</li>
-                            <li>Mobile App Creation</li>
-                            <li>User Experience Design</li>
-                            <li>Cloud Architecture</li>
+                            <li>Data Engineering</li>
+                            <li>Business Intelligence Engineering</li>
+                            <li>Software Development</li>
+                            <li>Program Manager</li>
+                        </ul>
+                        <p>Topics i've been interested:</p>
+                        <ul>
+                            <li>Distributed Systems</li>
+                            <li>Database Internals</li>
+                            <li>AI Infrastructure</li>
                         </ul>
                     </div>
                     <div className="info-container">
@@ -67,6 +77,7 @@ export const About = (): JSX.Element => {
                         <p>I'm currently seeking opportunities in software development where I can apply my skills and continue to grow.</p>
                         <p>Feel free to check out my portfolio to see some of my recent projects, or contact me if you'd like to connect!</p>
                         <p>I enjoy collaborating on innovative projects that solve real-world problems.</p>
+                        <p>Feel free to connect and lets grab some food!</p>
                     </div>
                 </div>
 

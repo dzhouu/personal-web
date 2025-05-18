@@ -1,7 +1,6 @@
 import React, { JSX, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import './GearPage.css';
-import AllRightReserveComponent from "../All-Right-Reserve/All-Right-Reserve-Component";
 
 // Define interfaces outside the component for better readability
 interface ItemProps {
@@ -32,13 +31,13 @@ export const GearPage = (): JSX.Element => {
                     <h4 className="item-title">{title}</h4>
                     <p className="item-description">{description}</p>
                 </div>
-                <div className="item-image">
-                    {imageUrl ? (
-                        <img src={imageUrl} alt={title} />
-                    ) : (
-                        <img src="/api/placeholder/40/40" alt={title} />
-                    )}
-                </div>
+                {/*<div className="item-image">*/}
+                {/*    {imageUrl ? (*/}
+                {/*        <img src={imageUrl} alt={title} />*/}
+                {/*    ) : (*/}
+                {/*        <img src="/api/placeholder/40/40" alt={title} />*/}
+                {/*    )}*/}
+                {/*</div>*/}
             </div>
         );
     };
@@ -110,14 +109,6 @@ export const GearPage = (): JSX.Element => {
                             title: "Monitor 2",
                             description: "LG 27GN800-B UltraGear 27 inch QHD"
                         },
-                        {
-                            title: "Monitor 1",
-                            description: "LG 34WP60C-B 34-Inch UltraWide QHD"
-                        },
-                        {
-                            title: "Monitor 2",
-                            description: "LG 27GN800-B UltraGear 27 inch QHD"
-                        }
                     ]
                 },
                 {
@@ -187,7 +178,7 @@ export const GearPage = (): JSX.Element => {
                     items: [
                         {
                             title: "Morning",
-                            description: "CeraVe Hydrating Cleanser"
+                            description: "Roundlab Dokdo Cleanser"
                         },
                         {
                             title: "Evening",
@@ -199,7 +190,7 @@ export const GearPage = (): JSX.Element => {
                     title: "Toner",
                     items: [
                         {
-                            title: "Daily",
+                            title: "ISov",
                             description: "Thayers Witch Hazel Toner"
                         }
                     ]
@@ -241,6 +232,10 @@ export const GearPage = (): JSX.Element => {
                         {
                             title: "Wallet",
                             description: "Slim minimalist wallet"
+                        },
+                        {
+                            title: "Sunglasses",
+                            description: "Gentlemonster"
                         }
                     ]
                 }
