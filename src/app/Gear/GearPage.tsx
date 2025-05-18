@@ -1,5 +1,5 @@
-import React, { JSX, useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import React, {JSX, useState} from 'react';
+import {useNavigate} from "react-router-dom";
 import './GearPage.css';
 
 // Define interfaces outside the component for better readability
@@ -24,7 +24,7 @@ export const GearPage = (): JSX.Element => {
     const navigate = useNavigate();
 
     // Item Component with more compact styling
-    const Item: React.FC<ItemProps> = ({ title, description, imageUrl }) => {
+    const Item: React.FC<ItemProps> = ({title, description, imageUrl}) => {
         return (
             <div className="item">
                 <div className="item-info">
@@ -43,7 +43,7 @@ export const GearPage = (): JSX.Element => {
     };
 
     // Section Component with improved toggle functionality
-    const Section: React.FC<SectionProps> = ({ title, items, defaultOpen = false }) => {
+    const Section: React.FC<SectionProps> = ({title, items, defaultOpen = false}) => {
         const [isOpen, setIsOpen] = useState(defaultOpen);
 
         const toggleSection = () => {
@@ -138,27 +138,43 @@ export const GearPage = (): JSX.Element => {
             title: "Sports",
             sections: [
                 {
-                    title: "Lighting",
+                    title: "Snowboarding",
                     items: [
                         {
-                            title: "Desk Lamp",
-                            description: "Adjustable LED desk lamp"
+                            title: "Snowboard",
+                            description: "Capita"
                         },
                         {
-                            title: "Key Light",
-                            description: "Elgato Key Light Air"
+                            title: "Helmet",
+                            description: "Giro Grid MIPS Helmet"
+                        },
+                        {
+                            title: "Goggles",
+                            description: "Oakley Flight Tracker L Goggles"
+                        },
+                        {
+                            title: "Boot",
+                            "description": "Burton Ruler Step On Snowboard Boots"
                         }
                     ]
                 },
                 {
-                    title: "Microphones",
+                    title: "Tennis",
                     items: [
                         {
-                            title: "Mic",
-                            description: "Blue Yeti X"
+                            title: "Irons",
+                            description: "Mizuno JPX925 Hot Metal High Launch Golf Club Set"
+                        },
+                        {
+                            title: "Driver",
+                            description: "Coming Soon!"
+                        },
+                        {
+                            title: "Golf Bag",
+                            description: "Vessel Golf Bag"
                         }
                     ]
-                }
+                },
             ]
         },
         {
@@ -255,7 +271,7 @@ export const GearPage = (): JSX.Element => {
     ];
 
     // Grid-based Category Component for better space utilization
-    const Category: React.FC<CategoryProps> = ({ title, sections }) => {
+    const Category: React.FC<CategoryProps> = ({title, sections}) => {
         return (
             <div className="category">
                 <h2 className="category-title">{title}</h2>
