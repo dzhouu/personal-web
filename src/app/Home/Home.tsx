@@ -47,11 +47,7 @@ export const Home = (): JSX.Element => {
 
             {/* Main content container */}
             <div className="content-container">
-                {/*<h1 className="home-title">*/}
-                {/*    Denny Zhou*/}
-                {/*</h1>*/}
                 <ProfileHeader />
-
                 <div className="nav-buttons">
                     <button
                         type="button"
