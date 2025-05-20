@@ -62,7 +62,7 @@ export class Socials extends Component<{}> {
                         </li>
                         <li className="icon-content">
                             <a
-                                href="https://www.instagram.com/dzhouu/"
+                                href="https://www.instagram.com/zhouden11/"
                                 aria-label="Instagram"
                                 data-social="instagram"
                             >

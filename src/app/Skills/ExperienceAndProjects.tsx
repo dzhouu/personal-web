@@ -49,9 +49,14 @@ const ExperienceAndProjects: React.FC = () => {
             company: 'Supio',
             period: 'March 2024 - November 2024',
             location: 'Seattle, WA',
-            summary: 'Developed responsive web interfaces using React and Tailwind CSS. Collaborated with the design team to implement UI components. Improved website performance by 25% through code optimization.',
-            description: ['hi'],
-            technologies: ['React', 'JavaScript', 'Tailwind CSS', 'Git']
+            summary: 'Data and Product Engineer for the Mass Tort Product team where I spearheaded the re-design of the Product pipeline process for Report and Overview case generation',
+            description:
+                [
+                    'Refactored internal JSON metadata for various stakeholders',
+                    "Enhanced development efficiency and flexibility in schema management by engineering a full-stack Schema FunctionEditor that enabled developers to create, retrieve, and edit schema functions stored in DynamoDB using GraphQL APIs",
+                    "Led the implementation/deployment of automated pipeline processes, achieving an 87.5% reduction in processing time per case. Architected a fault-tolerant, concurrent system that preserved execution states by leveraging TemporalIO OpenAI fine-tuned models, and AWS S3 to generate, process, and integrate case report & overviews."
+                ],
+            technologies: ['Python', 'React', 'Typescript', 'Natural Language Processing', 'TemporalIO', 'Amazon Web Services', 'Git']
         },
     ];
 
@@ -60,9 +65,12 @@ const ExperienceAndProjects: React.FC = () => {
             id: 'proj1',
             title: 'Sharded Transactional Key-Value Store',
             period: 'December 2023',
-            summary: 'Designed and developed a responsive portfolio website to showcase my skills and projects. Implemented modern UI/UX principles and animations.',
-            description: [],
-            technologies: ['React', 'CSS', 'Responsive Design'],
+            summary: 'Implemented a KV-Store that is highly scalable',
+            description: ["Wrote and implemented a design documentation of a fault-tolerant sharded key-value store that allowed cross-group\n" +
+            "transactions and handled reconfiguration.", "Integrated a Shard Master utilizing multi-paxos with dynamic reconfiguration and load balancing of shards among\n" +
+            "replica groups.", "Extended system’s functionality by implementing two-phase commit with locking, deadlock-free behavior, and\n" +
+            "guaranteeing linearizability of all transactions, including concurrent re-configurations."],
+            technologies: ['Java', 'Lombok', 'Distributed Systems'],
             links: {
                 github: 'https://github.com/username/portfolio',
                 live: 'https://yourportfolio.com'
@@ -72,9 +80,12 @@ const ExperienceAndProjects: React.FC = () => {
             id: 'proj2',
             title: 'Document Search Engine',
             period: 'June 2023',
-            summary: 'Built a full-stack task management application with user authentication, task categorization, and deadline reminders. Implemented drag-and-drop functionality.',
-            description: [],
-            technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Authentication'],
+            summary: 'Built a Document Search Engine called 333gle that enables users to query for files stored on disk that contain specific words or phrases',
+            description: ["Developed a document search engine and front-end web server built on top of POSIX that is capable of processing\n" +
+            "word inputs to match a pre-populated database.", "Implemented a doubly linked list and chaining hash table through a program capable of modifying index files in\n" +
+            "network-byte order and a directory crawler to create inverted indices stored on disk.", "Utilized multi-threaded networking to allow multiple clients to interact simultaneously with search engine and\n" +
+            "handle over 300 queries per second."],
+            technologies: ['C', 'C++', 'POSIX'],
             links: {
                 github: 'https://github.com/username/task-app',
                 live: 'https://yourtaskapp.com'
@@ -84,8 +95,11 @@ const ExperienceAndProjects: React.FC = () => {
             id: 'proj3',
             title: 'SimpleDB',
             period: 'June 2024',
-            summary: 'Created a comprehensive UI design for an e-commerce platform. Designed user flows, wireframes, and high-fidelity mockups.',
-            description: [],
+            summary: 'Created a Simple Database called SimpleDB that is capable of storing data.',
+            description: ["Developed core components of a database management system, including query parsing, table operators, relational\n" +
+            "algebra operators, buffer pool, and data management.", "Implemented a buffer pool with caching mechanisms and an eviction policy to improve performance, ensuring\n" +
+            "transactional safety through a synchronized Log Manager.", "Extended the system to support concurrent transactions using Strict 2PL with a timeout-based deadlock detection\n" +
+            "mechanism for safe concurrency and recovery."],
             technologies: ['Figma', 'UI/UX Design', 'Prototyping'],
             links: {
                 github: null,
@@ -96,9 +110,9 @@ const ExperienceAndProjects: React.FC = () => {
             id: 'proj4',
             title: 'Tic-Tac-Toe',
             period: 'May 2025',
-            summary: 'Created a comprehensive UI design for an e-commerce platform. Designed user flows, wireframes, and high-fidelity mockups.',
-            description: [],
-            technologies: ['Figma', 'UI/UX Design', 'Prototyping'],
+            summary: 'Command Line Game allowing users to play Tic Tac Toe.',
+            description: ["Utilized Object Oriented Programming Design Patterns to implement the class", "Enabled users to interact by writing to Command Line and receiving and giving Input/Output"],
+            technologies: ['Python', 'CL', "Object Oriented Programming"],
             links: {
                 github: null,
                 live: 'https://www.figma.com/file/example'
@@ -108,21 +122,24 @@ const ExperienceAndProjects: React.FC = () => {
             id: 'proj5',
             title: 'Dennyz.com',
             period: 'May 2025 - Present',
-            summary: 'Created a comprehensive UI design for an e-commerce platform. Designed user flows, wireframes, and high-fidelity mockups.',
+            summary: 'The Website you are currently on :)',
             description: [],
-            technologies: ['Figma', 'UI/UX Design', 'Prototyping'],
+            technologies: ['TypeScript', "React", 'UI/UX Design', 'Prototyping', "Routes"],
             links: {
                 github: null,
-                live: 'https://www.figma.com/file/example'
+                live: 'https://www.dennyz.com'
             }
         },
         {
             id: 'proj6',
             title: 'QuizMe',
             period: 'March 2024',
-            summary: 'Created a comprehensive UI design for an e-commerce platform. Designed user flows, wireframes, and high-fidelity mockups.',
-            description: [],
-            technologies: ['Figma', 'UI/UX Design', 'Prototyping'],
+            summary: 'A Comprehensive App that enables users to create and study Flash Cards',
+            description: ["Developed a dynamic digital application utilizing React and TypeScript, enabling users to create, manage, and\n" +
+            "study customizable flashcard sets for enhanced learning experiences.", "Successfully integrated REST API communications for seamless data persistence and retrieval, while implementing\n" +
+            "error handling and input validation for improved reliability on the back-end utilizing Express.", "Conducted thorough Unit testing to ensure all components and functionalities (both front-end and back-end) work\n" +
+            "as intended, delivering a high-quality product."],
+            technologies: ['TypeScript', 'React', 'Express', "Routing", "RestAPI"],
             links: {
                 github: null,
                 live: 'https://www.figma.com/file/example'
@@ -132,12 +149,12 @@ const ExperienceAndProjects: React.FC = () => {
             id: 'proj7',
             title: 'Central Limit Theorem',
             period: 'March 2025',
-            summary: 'Created a comprehensive UI design for an e-commerce platform. Designed user flows, wireframes, and high-fidelity mockups.',
-            description: [],
-            technologies: ['Figma', 'UI/UX Design', 'Prototyping'],
+            summary: 'The Central Limit Theorem in detail',
+            description: [""],
+            technologies: ['HTML/CSS', 'UI/UX Design', 'JavaScript', "ObservableHQ", "Vega-Lite"],
             links: {
                 github: null,
-                live: 'https://www.figma.com/file/example'
+                live: 'https://clt-statistics-a5e31b.pages.cs.washington.edu/'
             }
         },
     ];
