@@ -159,7 +159,7 @@ export const GearPage = (): JSX.Element => {
                     ]
                 },
                 {
-                    title: "Tennis",
+                    title: "Golf",
                     items: [
                         {
                             title: "Irons",
@@ -175,6 +175,7 @@ export const GearPage = (): JSX.Element => {
                         }
                     ]
                 },
+
             ]
         },
         {

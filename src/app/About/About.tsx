@@ -40,8 +40,9 @@ export const About = (): JSX.Element => {
                         <h1 className="info-heading">Who I Am</h1>
                         <p>I was born and raised in Seattle, WA but lived in China for a few years</p>
                         <p>Graduate from the University of Washington Computer Science Department</p>
-                        <p>I am an avid foodie and I love to chat over coffee/food.</p>
+                        <p>I am an avid foodie and I love to chat over coffee/food or cook on my free time.</p>
                         <p>I love cars and my dream car is a Porsche 911</p>
+                        <p>Fashion is something I want to get into, how to dress better is something I ask myself 🤣</p>
                         <p>My favorite sports teams are the Seahawks and Warriors</p>
                     </div>
                     <div className="info-container">
@@ -53,12 +54,12 @@ export const About = (): JSX.Element => {
                             <li>Golf</li>
                             <li>Video Games - Valorant, Destiny 2, Pokemon</li>
                             <li>Foodie Adventures - Follow my Beli!</li>
-                            <li>Anime</li>
+                            <li>Watching Anime (Currently watching: My Hero Academia)</li>
                         </ul>
                     </div>
                     <div className="info-container">
                         <h1 className="info-heading">Interest</h1>
-                        <p>Some of my Career interest consist of:</p>
+                        <p>Some of my career interest consist of:</p>
                         <ul>
                             <li>Data Engineering</li>
                             <li>Business Intelligence Engineering</li>
@@ -74,14 +75,12 @@ export const About = (): JSX.Element => {
                     </div>
                     <div className="info-container">
                         <h1 className="info-heading">More Info</h1>
-                        <p>I'm currently seeking opportunities in software development where I can apply my skills and continue to grow.</p>
+                        <p>I'm currently seeking opportunities in Data Engineering/Software Development where I can apply my skills and continue to grow.</p>
                         <p>Feel free to check out my portfolio to see some of my recent projects, or contact me if you'd like to connect!</p>
                         <p>I enjoy collaborating on innovative projects that solve real-world problems.</p>
-                        <p>Feel free to connect and lets grab some food!</p>
+                        <p>Lets grab some food!</p>
                     </div>
                 </div>
-
-                <AllRightReserveComponent/>
             </div>
         </div>
     );
