@@ -52,9 +52,8 @@ export const About = (): JSX.Element => {
                             <li>Snowboarding - IKON Pass Holder during the winter time</li>
                             <li>Tennis</li>
                             <li>Golf</li>
-                            <li>Video Games - Valorant, Destiny 2, Pokemon</li>
                             <li>Foodie Adventures - Follow my Beli!</li>
-                            <li>Watching Anime (Currently watching: My Hero Academia)</li>
+                            <li>Watching Anime (Currently watching: Kaiju No. 8 and Sakamoto Days)</li>
                         </ul>
                     </div>
                     <div className="info-container">
